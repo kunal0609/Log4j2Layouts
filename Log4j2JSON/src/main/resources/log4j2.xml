@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <Console name="LogInJSON" target="SYSTEM_OUT">
+        	<JsonLayout complete="false" compact="false">
+            	<KeyValuePair key="OurField" value="OurValue" />
+        	</JsonLayout>
+    	</Console>
+    </Appenders>
+    <Loggers>
+        <Logger name="com.jcg" level="debug" additivity="false">
+            <AppenderRef ref="LogInJSON"/>
+        </Logger>
+        <Root level="error">
+            <AppenderRef ref="LogInJSON"/>
+        </Root>
+    </Loggers>
+</Configuration>
